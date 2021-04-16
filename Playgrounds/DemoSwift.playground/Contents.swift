@@ -73,3 +73,57 @@ class Car: Vehicule {
 }
 
 let myCar = Car(name: "", numberOfWheels: 4)
+
+// Fonctions
+
+// Simple
+func doSomething() {
+    print("Do something")
+}
+
+doSomething()
+doSomething()
+
+// Avec paramètres
+func multiply(_ firstNumber: Int, by multiplier: Int) {
+    let result = firstNumber * multiplier
+    print(result)
+}
+
+// Argument label
+multiply(5, by: 2)
+// multiply 5 by 2
+
+var array = ["Toto"]
+array.append("Titi")
+
+var intArray = [0, 1]
+array.remove(at: 0)
+intArray.insert(2, at: 0)
+intArray.append(contentsOf: [2,3,4])
+
+func sayHi(to name: String = "you") {
+    print("Hi, \(name)")
+}
+
+sayHi(to: "Ludovic")
+sayHi()
+
+print("A", "B", "C", separator: "/")
+print("A", "B", "C", separator: "/", terminator: "!")
+
+// Avec retour de valeur
+func add(_ firstNumber: Int, to secondNumber: Int) -> Int {
+    firstNumber + secondNumber
+}
+
+let resultAdd = add(5, to: 5)
+
+func substract(_ first: Int, to second: Int) -> (op1: Int, op2: Int, result: Int) {
+    let result = second - first
+    return (first, second, result)
+}
+
+let resultSub = substract(5, to: 10)
+print(resultSub.result)
+print(resultSub)
