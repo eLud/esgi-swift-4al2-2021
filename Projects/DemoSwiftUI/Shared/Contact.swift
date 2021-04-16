@@ -7,11 +7,9 @@
 
 import Foundation
 
-struct Contact {
+struct Contact: Identifiable {
     let name: String
     let date: Date
 
-    func test() {
-
-    }
+    let id = UUID()
 }

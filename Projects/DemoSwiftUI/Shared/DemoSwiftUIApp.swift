@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct DemoSwiftUIApp: App {
+
+    @State private var tracer = ContactTracer(contacts: [])
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppNavigationRootView(tracer: $tracer)
         }
     }
 }
