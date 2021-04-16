@@ -22,3 +22,36 @@ let preciseC = Double(a) / Double(b)
 
 print(c)
 
+struct Odometer {
+
+    var count: Int = 0
+
+    mutating func increment() {
+        count += 1
+    }
+
+    mutating func reset() {
+        count = 0
+    }
+
+    func printMileage() {
+        print(count)
+    }
+
+//    init(count: Int) {
+//        self.count = count
+//    }
+//
+//    init() {
+//        count = 0
+//    }
+}
+
+let odo1 = Odometer()
+print(odo1.count)
+
+var odo2 = Odometer(count: 100)
+print(odo2.count)
+
+odo1.printMileage()
+
