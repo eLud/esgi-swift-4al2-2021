@@ -55,3 +55,21 @@ print(odo2.count)
 
 odo1.printMileage()
 
+class Vehicule {
+
+    var name: String
+    var numberOfWheels: Int
+
+    init(name: String, numberOfWheels: Int) {
+        self.name = name
+        self.numberOfWheels = numberOfWheels
+    }
+}
+
+class Car: Vehicule {
+
+    // Toutes les propriétés doivent être initialisées
+    var test: Int = 0
+}
+
+let myCar = Car(name: "", numberOfWheels: 4)
