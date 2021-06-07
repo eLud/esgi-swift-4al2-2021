@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State var mealName: String = "Pizza"
-    @State var isVeggie = false
+    @State private var mealName: String = "Pizza"
+    @State private var isVeggie = false
 
     var body: some View {
         VStack {
             Text(mealName)
                 .roundedBackground(color: .blue)
-            TextField("Meal Name", text: $mealName)
+            TextField("Meal name", text: $mealName)
             Image(systemName: "xmark")
                 .roundedBackground(color: .red)
                 .background(Color.yellow)
