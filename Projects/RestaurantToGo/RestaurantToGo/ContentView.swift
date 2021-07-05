@@ -9,21 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
 
-    @State private var mealName: String = "Pizza"
+    @State private var mealName: String = "Commenda"
     @State private var isVeggie = false
+    @State private var numberOfItems = 1
+
+    let mealIngredients = "Sauce tomate, mozzarella, roquette"
+    let mealPrice: Double = 15
+
+    @EnvironmentObject var userData: UserData
 
     var body: some View {
-        VStack {
-            Text(mealName)
-                .roundedBackground(color: .blue)
-            TextField("Meal name", text: $mealName)
-            Image(systemName: "xmark")
-                .roundedBackground(color: .red)
-                .background(Color.yellow)
-            VeggieView(isVeggie: $isVeggie)
-            Toggle(isOn: $isVeggie, label: {
-                Text("Is Veggie")
-            })
+        VStack(alignment: .leading) {
+            Image(systemName: "hare.fill")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            MealNameView(mealName: mealName, mealIngredients: mealIngredients)
+                .padding(.horizontal)
+            Spacer()
+            PayButton(numberOfItems: $numberOfItems)
         }
     }
 }
@@ -56,5 +59,6 @@ extension View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(UserData())
     }
 }

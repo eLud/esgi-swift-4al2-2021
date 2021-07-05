@@ -11,6 +11,8 @@
 		33163CBA264EC0CA0060C225 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33163CB9264EC0CA0060C225 /* ContentView.swift */; };
 		33163CBC264EC0CD0060C225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33163CBB264EC0CD0060C225 /* Assets.xcassets */; };
 		33163CBF264EC0CD0060C225 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33163CBE264EC0CD0060C225 /* Preview Assets.xcassets */; };
+		3362AA69266E82580078E3C4 /* MealNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362AA68266E82580078E3C4 /* MealNameView.swift */; };
+		3362AA6B266E840B0078E3C4 /* PayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3362AA6A266E840B0078E3C4 /* PayButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		33163CBB264EC0CD0060C225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33163CBE264EC0CD0060C225 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		33163CC0264EC0CD0060C225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3362AA68266E82580078E3C4 /* MealNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealNameView.swift; sourceTree = "<group>"; };
+		3362AA6A266E840B0078E3C4 /* PayButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				33163CB7264EC0CA0060C225 /* RestaurantToGoApp.swift */,
 				33163CB9264EC0CA0060C225 /* ContentView.swift */,
+				3362AA6A266E840B0078E3C4 /* PayButton.swift */,
+				3362AA68266E82580078E3C4 /* MealNameView.swift */,
 				33163CBB264EC0CD0060C225 /* Assets.xcassets */,
 				33163CC0264EC0CD0060C225 /* Info.plist */,
 				33163CBD264EC0CD0060C225 /* Preview Content */,
@@ -138,7 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3362AA6B266E840B0078E3C4 /* PayButton.swift in Sources */,
 				33163CBA264EC0CA0060C225 /* ContentView.swift in Sources */,
+				3362AA69266E82580078E3C4 /* MealNameView.swift in Sources */,
 				33163CB8264EC0CA0060C225 /* RestaurantToGoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

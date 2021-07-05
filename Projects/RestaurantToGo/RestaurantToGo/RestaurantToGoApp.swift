@@ -9,9 +9,21 @@ import SwiftUI
 
 @main
 struct RestaurantToGoApp: App {
+
+    @StateObject var userData = UserData()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            VStack {
+                ContentView()
+            }
+            .environmentObject(userData)
         }
     }
+}
+
+class UserData: ObservableObject {
+
+    @Published var userName: String = "Ludovic"
+    @Published var accountBalance: Double = 50
 }
