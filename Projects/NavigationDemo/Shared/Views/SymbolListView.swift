@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SymbolListView: View {
+
+    @State private var showAction = false
+
     var body: some View {
         List {
             NavigationLink(
@@ -27,9 +30,14 @@ struct SymbolListView: View {
                 })
             SymbolCell(symboleName: "tortoise.fill")
         }
+        .actionSheet(isPresented: $showAction, content: {
+            ActionSheet(title: Text("Title"), message: Text("Message"), buttons: [.default(Text("Save"), action: {}),.cancel(), .destructive(Text("Destroy"), action: {})])
+        })
         .toolbar(content: {
             ToolbarItemGroup {
-                Button(action: {}, label: {
+                Button(action: {
+                    showAction = true
+                }, label: {
                     Image(systemName: "plus")
                 })
                 Button(action: {}, label: {
